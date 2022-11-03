@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sorting Visualizer</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<style>
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+.btn{
+    margin-left: 5px;
+}
+
+body .buttons .btnArray{
+    border: 1px solid green;
+    color: green;
+}
+
+.buttons .btn{
+    border: 1px solid blue;
+    color: blue;
+}
+
+.bars{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn:hover{
+    color: aliceblue;
+}
+</style>
+
+</head>
+
+<body style="background-color: rgb(41, 42, 42);">
+ 
+    <h2 style="text-align: center; color: aliceblue;">Sorting Visualizer</h2>
+    <div class="input-group mb-3" style="margin: auto;">
+      <div class="input-group-prepend" style="margin:auto; display: inline-flex;">
+        <!-- <span class="input-group-text" id="basic-addon1"></span> -->
+        <input type="text" min="10" max="100" id="elements" step="1" class="form-control" placeholder="Number of elements" aria-label="Username" style="width: 200px; text-align: center; margin-right: 10px;">
+        <input type="text" min="10" max="100" id="time" step="1" class="form-control" placeholder="Delay Time in Seconds" aria-label="Username" style="width: 200px; text-align: center;">
+
+      </div>
+    </div>
+    <div class="buttons" style="margin: 10px;">
+        <button class="btnArray btn btn-dark bubble" id="createArray" style="margin-right: 50%;">New Array</button>
+        <button class="btn btn-dark bubble" id="bubble">Bubble Sort</button>
+        <button class="btn btn-dark bubble" id="selection">Selection Sort</button>
+        <button class="btn btn-dark bubble" id="insertion">Insertion Sort</button>
+        <button class="btn btn-dark bubble" id="quick">Quick Sort</button>
+        <button class="btn btn-dark bubble" id="merge">Merge Sort</button>
+    </div>
+
+    <div class="bars" id="bars"></div>
+   
+    <h2 id="msg"></h2>
+  <script src="script.js"></script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
